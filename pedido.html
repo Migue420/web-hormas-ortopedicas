@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Pedido Hormas Ortopédicas</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 4px;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        label.required::after {
+            content: " *";
+            color: red;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 25px;
+            font-size: 1.1em;
+            transition: background-color 0.2s ease-in-out;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        form {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 25px 30px;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .campo-grupo {
+            margin-bottom: 18px;
+        }
+        .grupo-medidas {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .medida-item {
+            flex: 1;
+            min-width: 130px;
+        }
+        .medida-item label {
+             font-weight: normal;
+             margin-top: 0;
+        }
+        /* Estilo para el cuadro de instrucciones de email */
+        .instrucciones-email {
+            background-color: #e9f5ff;
+            padding: 15px 20px;
+            border-radius: 5px;
+            border: 1px solid #bde0ff;
+            margin-top: 25px;
+            margin-bottom: 20px; /* Añadido espacio inferior */
+        }
+        .instrucciones-email h3 {
+            margin-top: 0;
+            color: #0056b3;
+            text-align: center;
+        }
+        .instrucciones-email p {
+            text-align: center;
+            margin-bottom: 5px; /* Reducido margen inferior */
+            line-height: 1.4; /* Ajustado interlineado */
+        }
+         .instrucciones-email .email-address {
+             font-weight: bold;
+             font-size: 1.1em;
+             margin-top: 5px;
+             word-wrap: break-word; /* Evita que el email se salga */
+         }
+         .instrucciones-email .nota-asunto {
+             margin-top: 10px;
+             font-size: 0.9em;
+             color: #555;
+         }
+
+    </style>
+</head>
+<body>
+
+    <h1>Formulario para Hormas Ortopédicas a Medida</h1>
+
+    <form action="https://script.google.com/macros/s/AKfycbxjZLJTiYeFnoXGPvuHN5-AkbL0k5R9Zr7IG-Zvh9Z_bL5SJSSichARDmcd4NJfpR_Y/exec" method="post"> <h2>Datos de Contacto</h2>
+
+        <div class="campo-grupo">
+            <label for="nombre" class="required">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre_cliente" required>
+        </div>
+
+        <div class="campo-grupo">
+            <label for="email" class="required">Correo Electrónico:</label>
+            <input type="email" id="email" name="email_cliente" required>
+        </div>
+
+        <div class="campo-grupo">
+            <label for="telefono">Teléfono (opcional):</label>
+            <input type="tel" id="telefono" name="telefono_cliente">
+        </div>
+   
+        <div class="campo-grupo">
+            <label for="modelo" class="required">Modelo Elegido:</label>
+            <input type="text" id="modelo" name="modelo_elegido" required placeholder="Introduce el nombre o código del modelo que viste en el catálogo">
+            <small>Por favor, escribe el nombre o código tal como aparece en nuestro catálogo.</small>
+        </div>
+        
+        <h2>Preferencias del Calzado</h2>
+
+        <div class="campo-grupo">
+            <label for="tipo_calzado" class="required">Tipo de Calzado Deseado:</label>
+            <select id="tipo_calzado" name="tipo_calzado" required>
+                <option value="" disabled selected>-- Selecciona una opción --</option>
+                <option value="vestir">Vestir</option>
+                <option value="sport">Sport / Casual</option>
+                <option value="trabajo">Trabajo / Seguridad</option>
+                <option value="otro">Otro (especificar en descripción)</option>
+            </select>
+        </div>
+
+        <div class="campo-grupo">
+            <label for="material" class="required">Material Preferido:</label>
+            <select id="material" name="material" required>
+                <option value="" disabled selected>-- Selecciona una opción --</option>
+                <option value="piel">Piel / Cuero</option>
+                <option value="sintetico">Sintético</option>
+                <option value="textil">Textil</option>
+                <option value="indiferente">Indiferente / Mixto</option>
+            </select>
+        </div>
+
+        <div class="campo-grupo">
+            <label for="altura_tacon">Altura de Tacón Deseada (cm, opcional):</label>
+            <input type="number" id="altura_tacon" name="altura_tacon" min="0" step="0.5" placeholder="Ej: 2.5">
+        </div>
+
+        <div class="campo-grupo">
+            <label for="talla" class="required">Talla Europea Habitual:</label>
+            <input type="number" id="talla" name="talla" min="20" max="55" step="0.5" placeholder="Ej: 39.5" required>
+        </div>
+
+        <h2>Detalles del Pie y Necesidades</h2>
+
+        <div class="campo-grupo">
+            <label class="required">Medidas Principales (en cm):</label>
+
+            <h3 style="margin-top: 15px; margin-bottom: 5px; color: #555;">Pie Izquierdo</h3>
+            <div class="grupo-medidas">
+                <div class="medida-item">
+                    <label for="largo_izq">Largo Pie (Izquierdo):</label>
+                    <input type="number" id="largo_izq" name="largo_pie_izq" step="0.1" placeholder="Ej: 26.3" required>
+                </div>
+                <div class="medida-item">
+                    <label for="ancho_meta_izq">Ancho Metatarsos (Izquierdo):</label>
+                    <input type="number" id="ancho_meta_izq" name="ancho_metatarsos_izq" step="0.1" placeholder="Ej: 9.5" required>
+                </div>
+                <div class="medida-item">
+                    <label for="peri_empeine_izq">Perímetro Empeine (Izquierdo):</label>
+                    <input type="number" id="peri_empeine_izq" name="perimetro_empeine_izq" step="0.1" placeholder="Ej: 23.2" required>
+                </div>
+                 <div class="medida-item">
+                    <label for="peri_meta_izq">Perímetro Metatarsos (Izquierdo):</label>
+                    <input type="number" id="peri_meta_izq" name="perimetro_metatarsos_izq" step="0.1" placeholder="Ej: 22.8" required>
+                </div>
+                 <div class="medida-item">
+                    <label for="entrada_talon_izq">Entrada Talón-Empeine (Izquierdo):</label>
+                    <input type="number" id="entrada_talon_izq" name="entrada_talon_empeine_izq" step="0.1" placeholder="Ej: 31.5" required>
+                 </div>
+            </div>
+
+            <h3 style="margin-top: 20px; margin-bottom: 5px; color: #555;">Pie Derecho</h3>
+             <div class="grupo-medidas">
+                 <div class="medida-item">
+                    <label for="largo_der">Largo Pie (Derecho):</label>
+                    <input type="number" id="largo_der" name="largo_pie_der" step="0.1" placeholder="Ej: 26.5" required>
+                </div>
+                <div class="medida-item">
+                    <label for="ancho_meta_der">Ancho Metatarsos (Derecho):</label>
+                    <input type="number" id="ancho_meta_der" name="ancho_metatarsos_der" step="0.1" placeholder="Ej: 9.6" required>
+                </div>
+                <div class="medida-item">
+                    <label for="peri_empeine_der">Perímetro Empeine (Derecho):</label>
+                    <input type="number" id="peri_empeine_der" name="perimetro_empeine_der" step="0.1" placeholder="Ej: 23.4" required>
+                </div>
+                 <div class="medida-item">
+                    <label for="peri_meta_der">Perímetro Metatarsos (Derecho):</label>
+                    <input type="number" id="peri_meta_der" name="perimetro_metatarsos_der" step="0.1" placeholder="Ej: 23.0" required>
+                </div>
+                 <div class="medida-item">
+                    <label for="entrada_talon_der">Entrada Talón-Empeine (Derecho):</label>
+                    <input type="number" id="entrada_talon_der" name="entrada_talon_empeine_der" step="0.1" placeholder="Ej: 31.8" required>
+                 </div>
+            </div>
+        </div>
+     
+        <div class="campo-grupo">
+            <label for="descripcion">Descripción Breve Necesidad/Patología (opcional):</label>
+            <textarea id="descripcion" name="descripcion_necesidad" rows="4" placeholder="Describe brevemente por qué necesitas las hormas a medida (ej: pie plano, juanetes, post-operatorio...). También puedes añadir aquí otras medidas o detalles."></textarea>
+        </div>
+
+        <div class="instrucciones-email">
+            <h3>¡Importante! Envío de Archivos y Nº Solicitud</h3>
+            <p>Tras rellenar y enviar este formulario, **recibirás un Número de Solicitud** en el mensaje de confirmación.</p>
+            <p>Por favor, envía los archivos necesarios (fotos detalladas de los pies, escaneos 3D, dibujos de la planta, etc.) por separado a la siguiente dirección de correo electrónico:</p>
+            <p class="email-address">
+                <a href="mailto:miguelsvalera@gmail.com">miguelsvalera@gmail.com</a>
+            </p>
+            <p class="nota-asunto"><strong>Es MUY IMPORTANTE</strong> que incluyas el **Número de Solicitud** que recibirás en el **asunto de tu email** junto con tu nombre completo. Ejemplo Asunto: <em>Archivos Solicitud [Número de Solicitud Aquí] - [Tu Nombre Completo]</em>.</p>
+            <p style="font-size: 0.9em;">Esto nos permite asociar tus archivos rápidamente con los datos de tu formulario.</p>
+        </div>
+
+        <div class="campo-grupo">
+            <label for="especialista">Ortopeda/Podólogo que te trata (opcional):</label>
+            <input type="text" id="especialista" name="nombre_especialista" placeholder="Nombre del profesional o clínica">
+        </div>
+
+        <div class="campo-grupo" style="text-align: center;"> <button type="submit">Enviar Datos del Formulario</button> </div>
+
+    </form>
+
+</body>
+</html>
